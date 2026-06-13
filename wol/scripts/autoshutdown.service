@@ -1,0 +1,14 @@
+[Unit]
+Description=Ping Monitor and Auto-Shutdown Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/root/shutdown.sh
+Restart=always
+RestartSec=10
+User=root
+
+[Install]
+WantedBy=multi-user.target

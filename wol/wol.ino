@@ -16,6 +16,7 @@ void setup() {
   Serial.begin(115200);
   delay(100);
 
+  WiFi.config(local_IP, gateway, subnet, primaryDNS, secondaryDNS);
   WiFi.begin(ssid, password);
 
   Serial.print("Connecting to WiFi");
